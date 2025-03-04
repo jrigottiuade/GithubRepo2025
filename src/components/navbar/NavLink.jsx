@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const NavLink = ({ link: link, name: name }) => {
   return (
     <div>
-      <Link to={link}>{name}</Link>
+      <Link className="hover:text-gray-500" to={link}>{name}</Link>
     </div>
   );
 };

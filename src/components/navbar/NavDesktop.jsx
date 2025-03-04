@@ -4,8 +4,8 @@ import NavLink from "./NavLink";
 
 const NavDesktop = () => {
   return (
-    <div>
-      <ul>{NavItems.map((item) => (
+    <div className="pe-10">
+      <ul className="flex gap-5">{NavItems.map((item) => (
         <li key={item.id} className="pb-3">
             <NavLink {...item} />
         </li>

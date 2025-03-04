@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useState } from "react";
+import HtmlSidebar from "../components/HtmlSidebar";
+import { useHtmlComponents } from "../hook/useHtmlComponents";
 
 const HtmlView = () => {
-  return (
-    <div>
-      <h2>Contenido HTML</h2>
-    </div>
-  )
-}
+  const { selectedComponent, setSelectedComponent, htmlComponents } =
+    useHtmlComponents();
 
-export default HtmlView
+  return (
+    <div className="flex ">
+      <div>
+        <HtmlSidebar
+          htmlComponents={htmlComponents}
+          setSelectedComponent={setSelectedComponent}
+        />
+      </div>
+      <div>{htmlComponents[selectedComponent]}</div>
+    </div>
+  );
+};
+
+export default HtmlView;
