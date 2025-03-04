@@ -5,9 +5,9 @@ import RootProvider from "./core/providers/RootProvider";
 function App() {
   return (
     <RootProvider>
-      <RouterProvider router={appRouter} />;
+      <RouterProvider router={appRouter} />
     </RootProvider>
-  );
+  )
 }
 
 export default App;
