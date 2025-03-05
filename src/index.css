@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 @import "tailwindcss";
+
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+}
 
 @theme {
   --breakpoint-*: initial;
@@ -24,4 +30,8 @@
 
 .btn-primary {
   @apply bg-blue-500 text-white hover:bg-blue-700;
+}
+
+body  {
+  font-family: 'Poppins', sans-serif;
 }

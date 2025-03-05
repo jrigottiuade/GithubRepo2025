@@ -1,11 +1,28 @@
-import React from 'react'
+import React from "react";
+import DisplayCode from "../../../components/code/DisplayCode";
+import { useHtmlComponentsContent } from "../hook/useHtmlComponentsContent";
 
+// CODE SNIPPETS
 const HtmlComponent1 = () => {
-  return (
-    <div className='p-5'>
-      <h2>Este es el componente 1 de HTML</h2>
-    </div>
-  )
-}
+  const { codeSnippets } = useHtmlComponentsContent();
 
-export default HtmlComponent1
+  return (
+    <div>
+      {codeSnippets.map((codeSnippet) => (
+        <div key={codeSnippet.id} className="mb-6">
+          <h2 className="text-xl font-bold mb-4">{codeSnippet.title}</h2>
+          <DisplayCode code={codeSnippet.code} language="html" />
+
+          {/* Rendering Comments */}
+          {codeSnippet.comments.map((comment, index) => (
+            <p key={index} className="text-gray-600 italic">
+              {comment}
+            </p>
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default HtmlComponent1;

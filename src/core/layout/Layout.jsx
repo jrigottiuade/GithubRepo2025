@@ -10,13 +10,11 @@ const Layout = ({ children }) => {
           <img className="w-24" src="/images/logo_uade.png" alt="Logo UADE" />
           <h1 className="text-2xl px-5">Diseño y Desarrollo Web</h1>
         </div>
-        <div>
-          <NavDesktop />
-        </div>
+        <NavDesktop />
       </header>
 
       <div className="flex ">
-        <main className="p-3">{children}</main>
+        <main className="p-3 w-full">{children}</main>
       </div>
       <footer className="p-3 bg-neutral-700 text-center text-neutral-50">
         Derechos Reservados 2025
