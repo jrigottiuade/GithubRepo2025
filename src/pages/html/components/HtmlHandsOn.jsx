@@ -1,6 +1,7 @@
 import React from 'react'
 
-const HtmlComponent2 = () => {
+// HANDS ON
+const HtmlHandsOn = () => {
   return (
     <div className='p-5'>
       <h2>Este es el componente 2 de HTML</h2>
@@ -8,4 +9,4 @@ const HtmlComponent2 = () => {
   )
 }
 
-export default HtmlComponent2
+export default HtmlHandsOn

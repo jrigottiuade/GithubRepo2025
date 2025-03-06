@@ -1,4 +1,4 @@
-export const useHtmlComponentsContent = () => {
+export const useHtmlCodeSnippets = () => {
   const codeSnippets = [
     {
       title: "Estructura HTML",

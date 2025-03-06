@@ -1,10 +1,10 @@
 import React from "react";
 import DisplayCode from "../../../components/code/DisplayCode";
-import { useHtmlComponentsContent } from "../hook/useHtmlComponentsContent";
+import { useHtmlCodeSnippets } from "../hook/useHtmlCodeSnippets";
 
 // CODE SNIPPETS
-const HtmlComponent1 = () => {
-  const { codeSnippets } = useHtmlComponentsContent();
+const HtmlCodeSnippets = () => {
+  const { codeSnippets } = useHtmlCodeSnippets();
 
   return (
     <div>
@@ -25,4 +25,4 @@ const HtmlComponent1 = () => {
   );
 };
 
-export default HtmlComponent1;
+export default HtmlCodeSnippets;

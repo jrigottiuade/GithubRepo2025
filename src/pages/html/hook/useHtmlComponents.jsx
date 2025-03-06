@@ -1,13 +1,13 @@
 import { useState } from "react";
-import HtmlComponent1 from "../components/HtmlComponent1";
-import HtmlComponent2 from "../components/HtmlComponent2";
-import HtmlComponent3 from "../components/HtmlComponent3";
+import HtmlCodeSnippets from "../components/HtmlCodeSnippets";
+import HtmlHandsOn from "../components/HtmlHandsOn";
+import HtmlMiscelaneas from "../components/HtmlMiscelaneas";
 
 export const useHtmlComponents = () => {
   const htmlComponents = {
-    "Code Snippets": <HtmlComponent1 />,
-    "Hands on": <HtmlComponent2 />,
-    "Miscelaneas": <HtmlComponent3 />,
+    "Code Snippets": <HtmlCodeSnippets />,
+    "Hands on": <HtmlHandsOn />,
+    "Miscelaneas": <HtmlMiscelaneas />,
   };
 
   const [htmlSelectedComponent, setHtmlSelectedComponent] = useState("Code Snippets");
