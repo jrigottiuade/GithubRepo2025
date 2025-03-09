@@ -1,9 +1,9 @@
 import React from "react";
-import DisplayCode from "../../../components/code/DisplayCode";
-import { useHtmlCodeSnippets } from "../hook/useHtmlCodeSnippets";
+import DisplayCode from "../../../../../components/code/DisplayCode";
+import {useHtmlCodeSnippets} from "../hooks/useHtmlCodeSnippets"
 
 // CODE SNIPPETS
-const HtmlCodeSnippets = () => {
+const HtmlCodeSnippetsView = () => {
   const { codeSnippets } = useHtmlCodeSnippets();
 
   return (
@@ -25,4 +25,4 @@ const HtmlCodeSnippets = () => {
   );
 };
 
-export default HtmlCodeSnippets;
+export default HtmlCodeSnippetsView;

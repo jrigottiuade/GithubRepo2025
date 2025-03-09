@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useHtmlMiscelaneas } from "../hook/useHtmlMiscelaneas";
+import { useHtmlMiscelaneas } from "../hooks/useHtmlMiscelaneas";
 import { Link } from "react-router-dom";
 
 // MISCELANEAS

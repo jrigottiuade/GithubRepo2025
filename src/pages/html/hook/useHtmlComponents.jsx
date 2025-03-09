@@ -1,16 +1,17 @@
 import { useState } from "react";
-import HtmlCodeSnippets from "../components/HtmlCodeSnippets";
-import HtmlHandsOn from "../components/HtmlHandsOn";
-import HtmlMiscelaneas from "../components/HtmlMiscelaneas";
+import HtmlCodeSnippetsView from "../subPages/codeSnippets/view/HtmlCodeSnippetsView";
+import HtmlHandsOnView from "../subPages/handsOn/view/HtmlHandsOnView";
+import HtmlMiscelaneasView from "../subPages/miscelaneas/view/HtmlMiscelaneasView";
 
 export const useHtmlComponents = () => {
-  const htmlComponents = {
-    "Code Snippets": <HtmlCodeSnippets />,
-    "Hands on": <HtmlHandsOn />,
-    "Miscelaneas": <HtmlMiscelaneas />,
-  };
+  const [htmlSelectedComponent, setHtmlSelectedComponent] =
+    useState("Code Snippets");
 
-  const [htmlSelectedComponent, setHtmlSelectedComponent] = useState("Code Snippets");
+  const htmlComponents = {
+    "Code Snippets": <HtmlCodeSnippetsView />,
+    "Hands on": <HtmlHandsOnView />,
+    Miscelaneas: <HtmlMiscelaneasView />,
+  };
 
   return { htmlSelectedComponent, setHtmlSelectedComponent, htmlComponents };
 };
