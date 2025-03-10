@@ -10,7 +10,7 @@ const HtmlCodeSnippetsView = () => {
     <div>
       {codeSnippets.map((codeSnippet) => (
         <div key={codeSnippet.id} className="mb-6">
-          <h2 className="text-xl font-bold mb-4">{codeSnippet.title}</h2>
+          <h1 className="text-xl font-bold mb-4">{codeSnippet.title}</h1>
           <DisplayCode code={codeSnippet.code} language="html" />
 
           {/* Rendering Comments */}

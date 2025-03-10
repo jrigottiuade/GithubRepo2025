@@ -1,6 +1,7 @@
 import { useState } from "react";
 import VscodeInstalacionView from "../subPages/instalacion/view/VscodeInstalacionView";
-import VscodeMiscelaneasView from "../subPages/MIscelaneas/view/VscodeMiscelaneasView";
+import VscodePluginsView from "../subPages/plugins/view/VscodePluginsView";
+import AsistentesIaView from "../subPages/asistentesIA/view/AsistentesIaView";
 
 export const useVscodeComponents = () => {
   const [vscodeSelectedComponent, setVscodeSelectedComponent] =
@@ -8,7 +9,8 @@ export const useVscodeComponents = () => {
 
   const vscodeComponents = {
     "Instalacion": <VscodeInstalacionView />,
-    "Miscelaneas" : <VscodeMiscelaneasView />
+    "Plugins" : <VscodePluginsView />,
+    "Asistentes IA" : <AsistentesIaView />
   };
 
   return {

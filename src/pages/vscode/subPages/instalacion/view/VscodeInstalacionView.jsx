@@ -1,9 +1,10 @@
 import React from 'react'
+import VscodeInstalacion from '../components/VscodeInstalacion'
 
 const VscodeInstalacionView = () => {
   return (
     <div>
-      <h2>Instalando Visual Studio Code</h2>
+      <VscodeInstalacion />
     </div>
   )
 }
