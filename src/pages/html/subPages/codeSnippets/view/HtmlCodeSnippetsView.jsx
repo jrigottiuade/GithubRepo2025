@@ -1,16 +1,16 @@
 import React from "react";
-import DisplayCode from "../../../components/code/DisplayCode";
-import { useHtmlCodeSnippets } from "../hook/useHtmlCodeSnippets";
+import DisplayCode from "../../../../../components/code/DisplayCode";
+import {useHtmlCodeSnippets} from "../hooks/useHtmlCodeSnippets"
 
 // CODE SNIPPETS
-const HtmlCodeSnippets = () => {
+const HtmlCodeSnippetsView = () => {
   const { codeSnippets } = useHtmlCodeSnippets();
 
   return (
     <div>
       {codeSnippets.map((codeSnippet) => (
         <div key={codeSnippet.id} className="mb-6">
-          <h2 className="text-xl font-bold mb-4">{codeSnippet.title}</h2>
+          <h1 className="text-xl font-bold mb-4">{codeSnippet.title}</h1>
           <DisplayCode code={codeSnippet.code} language="html" />
 
           {/* Rendering Comments */}
@@ -25,4 +25,4 @@ const HtmlCodeSnippets = () => {
   );
 };
 
-export default HtmlCodeSnippets;
+export default HtmlCodeSnippetsView;

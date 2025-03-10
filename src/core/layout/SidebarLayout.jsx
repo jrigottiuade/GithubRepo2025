@@ -7,7 +7,7 @@ const SidebarLayout = ({
 }) => {
   return (
     <div className="flex">
-      <div className="sidebar w-[200px] flex flex-col h-screen bg-neutral-200 pt-5">
+      <div className="sidebar w-[200px] flex flex-col h-auto bg-neutral-200 pt-5">
         {Object.keys(components).map((key) => (
           <button
             className="py-2 px-5 hover:bg-gray-400 text-start"

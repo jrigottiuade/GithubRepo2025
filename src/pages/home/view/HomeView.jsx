@@ -1,15 +1,15 @@
 import React from "react";
 import { useGlobal } from "../../../hooks/useGlobal";
+import Home from "../components/Home";
 
 const HomeView = () => {
-  const {desktopView} = useGlobal();
+  const { desktopView } = useGlobal();
 
   return (
     <div>
-      <h1>En desarrollo</h1>
-      <p>DesktopView {desktopView? "Desktop" : "Mobile"}</p>
+      <Home />
     </div>
-  )
+  );
 };
 
 export default HomeView;

@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 @import "tailwindcss";
 
-
 h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 @theme {
@@ -14,7 +13,6 @@ h1 {
   --breakpoint-laptop2: 1366px;
   --breakpoint-desktop: 1440px;
 
-
   --color-white: #fff;
   --color-purple: #3f3cbb;
   --color-midnight: #121063;
@@ -22,7 +20,17 @@ h1 {
   --color-bermuda: #78dcca;
 }
 
+.title-h1 {
+  @apply text-xl font-bold mb-4;
+}
 
+.title-h2 {
+  @apply text-sm font-semibold mb-4;
+}
+
+.icon-numeral {
+  @apply text-sm font-bold px-2 me-2 bg-gray-100 border border-gray-300 rounded-sm shadow-xs;
+}
 
 .btn {
   @apply px-4 py-2 font-bold rounded transition duration-300;
@@ -32,7 +40,7 @@ h1 {
   @apply bg-blue-500 text-white hover:bg-blue-700;
 }
 
-body  {
-  font-family: 'Poppins', sans-serif;
-  font-size: .9rem;
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
 }
