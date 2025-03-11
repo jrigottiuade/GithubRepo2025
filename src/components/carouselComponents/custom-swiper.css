@@ -1,0 +1,5 @@
+.custom-swiper .swiper-button-next,
+.custom-swiper .swiper-button-prev {
+  top: 20px !important; /* Ajusta este valor según sea necesario */
+  scale: 0.7
+}
