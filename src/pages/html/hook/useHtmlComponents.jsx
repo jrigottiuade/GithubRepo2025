@@ -1,6 +1,6 @@
 import { useState } from "react";
 import HtmlCodeSnippetsView from "../subPages/codeSnippets/view/HtmlCodeSnippetsView";
-import HtmlHandsOnView from "../subPages/handsOn/view/HtmlHandsOnView";
+import HtmlHandsOn1View from "../subPages/handsOn1/view/HtmlHandsOn1View";
 import HtmlMiscelaneasView from "../subPages/miscelaneas/view/HtmlMiscelaneasView";
 
 export const useHtmlComponents = () => {
@@ -9,8 +9,8 @@ export const useHtmlComponents = () => {
 
   const htmlComponents = {
     "Code Snippets": <HtmlCodeSnippetsView />,
-    "Hands on": <HtmlHandsOnView />,
-    Miscelaneas: <HtmlMiscelaneasView />,
+    "Hands-on #1": <HtmlHandsOn1View />,
+    "Miscelaneas": <HtmlMiscelaneasView />,
   };
 
   return { htmlSelectedComponent, setHtmlSelectedComponent, htmlComponents };

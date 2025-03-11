@@ -24,8 +24,16 @@ h1 {
   @apply text-xl font-bold mb-4;
 }
 
+.title-h1-underline {
+  @apply text-xl font-bold mb-4 border-b-1 pb-2 border-gray-300;
+}
+
 .title-h2 {
   @apply text-sm font-semibold mb-4;
+}
+
+.title-h2-underline {
+  @apply text-sm font-semibold mb-4 border-b-1 pb-2 border-gray-300;
 }
 
 .icon-numeral {
