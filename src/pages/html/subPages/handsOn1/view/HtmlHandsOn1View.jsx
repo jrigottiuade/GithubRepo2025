@@ -1,6 +1,6 @@
 import React from "react";
-import CarouselComponent from "../../../../../core/carouselComponents/CarouselComponent";
-import { useHandsOn1 } from "../hooks/useHandsOn1";
+import CarouselComponent from "../../../../../components/carouselComponents/CarouselComponent";
+import {useHandsOn1} from "../hooks/useHandsOn1"
 
 // HANDS ON
 const HtmlHandsOn1ViewView = () => {

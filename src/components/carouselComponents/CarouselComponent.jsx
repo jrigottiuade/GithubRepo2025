@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-
+import "./custom-swiper.css"
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
 
@@ -21,7 +21,7 @@ const CarouselComponent = ({ components }) => {
       }}
       navigation={true}
       modules={[Pagination, Navigation]}
-      className="mySwiper"
+      className="mySwiper custom-swiper"
     >
       {components.map((component) => (
         <SwiperSlide>{component}</SwiperSlide>
