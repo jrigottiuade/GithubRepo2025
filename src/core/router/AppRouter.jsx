@@ -6,6 +6,7 @@ import JsView from "../../pages/js/view/JsView";
 import VscodeView from "../../pages/vscode/view/VscodeView";
 import GitView from "../../pages/git/view/GitView";
 import Layout from "../layout/Layout";
+import HtmlMiscelaneasProvider from "../../pages/html/subPages/miscelaneas/provider/HtmlMiscelaneasProvider";
 
 export const appRouter = createHashRouter([
   {
@@ -20,7 +21,10 @@ export const appRouter = createHashRouter([
     path: "/html",
     element: (
       <Layout>
-        <HtmlView />
+        <HtmlMiscelaneasProvider>
+          <HtmlView />
+        </HtmlMiscelaneasProvider>
+
       </Layout>
     ),
   },

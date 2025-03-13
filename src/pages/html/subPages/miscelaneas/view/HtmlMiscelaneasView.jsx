@@ -1,24 +1,24 @@
 import React from "react";
 
-import { useHtmlMiscelaneas } from "../hooks/useHtmlMiscelaneas";
 import { Link } from "react-router-dom";
+import HtmlMiscelaneasSearchbox from "../components/HtmlMiscelaneasSearchbox";
+import { useHtmlMiscelaneas } from "../hooks/useHtmlMiscelaneas";
 
 // MISCELANEAS
 const HtmlMiscelaneas = () => {
-  const { linksMiscelaneas } = useHtmlMiscelaneas();
-
-  // Obtener categorías únicas
-  const uniqueCategories = [
-    ...new Set(linksMiscelaneas.map((item) => item.category)),
-  ];
-
+  const { uniqueCategories, linksMiscelaneasFiltered} = useHtmlMiscelaneas()
   return (
+
     <div className="p-6">
+      <div className="pb-10 flex justify-end ">
+        <HtmlMiscelaneasSearchbox />
+      </div>
+
       {uniqueCategories.map((category) => (
         <div key={category} className="mb-6">
           <h2 className="text-xl font-semibold mb-3">{category}</h2>
           <ul className="space-y-4">
-            {linksMiscelaneas
+            {linksMiscelaneasFiltered
               .filter((item) => item.category === category)
               .map((link) => (
                 <li key={link.id} className="border border-gray-300 p-4 rounded-lg shadow-md">
@@ -40,6 +40,7 @@ const HtmlMiscelaneas = () => {
         </div>
       ))}
     </div>
+
   );
 };
 
