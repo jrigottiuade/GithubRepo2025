@@ -514,6 +514,165 @@ body {
         "background-attachment: si se desplaza con el scroll (scroll) o queda fija (fixed)",
       ],
     },
+    {
+      title: "Insertar Icons usando el script de Font Awesome (kit)  ",
+      codeHtml: `
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Icons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <i class="fa-brands fa-html5"></i>
+    </div>
+
+    <!-- Fontawesome Script -->
+    <script src="https://kit.fontawesome.com/6fa5dfb795.js" crossorigin="anonymous"></script>
+</body>
+
+</html>`,
+      codeCss: `
+.fa-html5 {
+    color: red;
+    font-size: 2rem;
+    padding: 1rem;
+    border: 1px solid red;
+}`,
+      comments: [
+        "Tenés que agregar un <script> en tu HTML",
+        '<script src="https://kit.fontawesome.com/6fa5dfb795.js" crossorigin="anonymous"></script>',
+        'Ingresar a https://fontawesome.com/icons y buscar el icono que quieras',
+        'Buscar en la tab HTML de icono seleccionado el código',
+        'Pagarlo en tu HTML',
+        'Podes reutilizar la class para personalizarlo desde CSS'
+      ]
+    },
+    {
+      title: "Insertar Icons usando el SVG (seguimos con Fontawesome)  ",
+      codeHtml: `
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Icons</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <svg class="svg-html" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <path
+                d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z" />
+        </svg>
+    </div>
+</body>
+
+</html>`,
+      codeCss: `
+.svg-html {
+    fill: red;
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+    padding: 1rem;
+    margin: 1rem;
+}`,
+      comments: [
+        "Esta opción te da más control visual",
+        "No necesitas agregar el script",
+        "Desde la web de Font Awesome podés copiar el código SVG del ícono que quieras y pegarlo directamente en tu HTML",
+        "Podes personalizarlo desde CSS como cualquier otro elemento HTML",
+        "Notar que con el svg usamos fill en lugar de color",
+        "Y usamos width y height en lugar de font-size"
+      ]
+    },
+    {
+      title: "Insertar icons de Google Material Icons usando Variable Icons",
+      codeHtml: `
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Icons</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link Google Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+    <div>
+        <span class="material-symbols-outlined my-icon">html</span>
+    </div>
+</body>
+
+</html>`,
+      codeCss: `
+.my-icon {
+    font-size: 96px !important;
+    color: blue;
+    padding: 1rem;
+    border: 1px solid blue;
+}
+`,
+      comments: [
+        'En tu HTML agregá esta línea en el head <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />',
+        "Ingresar a https://fonts.google.com/icons",
+        "Buscar el icon que se desea insertar en la web y copiar el nombre",
+        'En el HTML pega esta línea <span class="material-symbols-outlined my-icon">__nombre</span>',
+        'Reemplaza __nombre por el nombre del icon',
+        'Usa la class my-icon para personalizarlo desde CSS'
+
+      ]
+    },
+    {
+      title: "Insertar icons de Google Material Icons usando svg",
+      codeHtml: `
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Icons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <svg 
+        class="my-icon"
+        xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M0-360v-240h60v80h80v-80h60v240h-60v-100H60v100H0Zm310 0v-180h-70v-60h200v60h-70v180h-60Zm170 0v-200q0-17 11.5-28.5T520-600h180q17 0 28.5 11.5T740-560v200h-60v-180h-40v140h-60v-140h-40v180h-60Zm320 0v-240h60v180h100v60H800Z"/></svg>
+    </div>
+</body>
+
+</html>`,
+      codeCss: `
+.my-icon {
+  fill: red;
+  width: 50px;
+  height: 50px;
+  padding: 1rem;
+  border: 1px solid blue;
+}`,
+      comments: [
+        "En este caso no necesitamos insertar el link en el head",
+        "En lugar del nombre del icon, descargamos el svg",
+        "Abrimos el svg con un editor de texto, copiamos y pegamos el svg en nuestro HTML",
+        "Le agregamos una class, en este caso my-icon y lo personalizamos de CSS",
+        "Notar que ahora usamos fill, width y height"
+      ]
+    }
   ];
 
   return { codeSnippets };
