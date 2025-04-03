@@ -59,7 +59,8 @@ export const UseCssCodeSnippets = () => {
 </body>
 </html>
 `,
-      codeCss: `/* Documento CSS con el nombre style.css*/
+      codeCss: `
+/* Documento CSS con el nombre style.css*/
 
 h2 {
   color: red;
@@ -72,12 +73,8 @@ h2 {
     {
       title: "Selectores de etiqueta",
       codeHtml: `
-<!-- Documento HTML -->
-
 <h2>Encabezado con formato CSS</h2>`,
       codeCss: `
-/* Documento CSS */
-
 h2 {
   color: red;
 }`,
@@ -88,14 +85,10 @@ h2 {
     {
       title: "Selectores de clase",
       codeHtml: `
-<!-- Documento HTML -->
-
 <p class="azul">párrafo en color azul</p>
 <p>otro párrafo</p>
       `,
       codeCss: `
-/* Documento CSS */
-
 .azul{
          color: #0000FF;
 }
@@ -107,13 +100,9 @@ h2 {
     {
       title: "Selectores de identificador",
       codeHtml: `
-<!-- Documento HTML -->
-
 <h2 id="rojo">Título</h2>
 <h2>Otro título</h2>`,
       codeCss: `
-/* Documento CSS */
-
 #rojo{
   color: red;
 }`,
@@ -124,15 +113,11 @@ h2 {
     {
       title: "Selectores combinados",
       codeHtml: `
-<!-- Documento HTML -->
-
 <div>
   <p>Hola a <em>todos</em></p>
 </div>
   <p>Chau a <em>todos</em></p>`,
       codeCss: `
-/* Documento CSS */
-
 div p em {
   color: red;
 }`,
@@ -141,8 +126,6 @@ div p em {
     {
       title: "Propiedades font para títulos y párrafos",
       codeHtml: `
-<!-- Documento HTML -->
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -158,8 +141,6 @@ div p em {
 </html>
       `,
       codeCss: `
-/* Documento CSS */
-
 body {
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -188,7 +169,6 @@ body {
     {
       title: "Propiedades text para títulos y párrafos",
       codeHtml: `
-<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -458,6 +438,7 @@ linea {
       comments: [
         "width total = 200 + (20x2 padding) + (5x2 border) = 250px",
         "height total = 100 + (20x2 padding) + (5x2 border) = 150px",
+        "Siempre se suma por fuera del tamaño total de la caja, sin importar el valor de box-sizing",
       ],
     },
     {
@@ -485,6 +466,52 @@ linea {
       comments: [
         "width total = 200px exactos, ya que el padding y border están incluidos",
         "Visualmente más compacta, pero con mismo contenido visible.",
+        "Siempre se suma por fuera del tamaño total de la caja, sin importar el valor de box-sizing",
+      ],
+    },
+    {
+      title: "Background-image",
+      codeHtml: `
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejemplo de Background</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <div class="fondo">
+    <h1>Fondo con imagen</h1>
+    <p>Este div tiene una imagen de fondo configurada con diferentes propiedades CSS.</p>
+  </div>
+</body>
+</html>
+`,
+      codeCss: `
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.fondo {
+  background-image: url('https://picsum.photos/id/1018/1000/600');
+  background-repeat: no-repeat;
+  background-size: cover; /* Probar: contain | 100% 100% | auto */
+  background-position: center center; /* Probar: top left, bottom right, etc */
+  background-attachment: fixed; /* Probar: scroll */
+  
+  color: white;
+  padding: 100px 20px;
+  height: 100vh;
+  text-align: center;
+}
+`,
+      comments: [
+        "background-image: define la imagen de fondo",
+        "background-repeat: si se repite o no",
+        "background-size: tamaño (cover, contain, valores fijos)",
+        "background-position: posición de la imagen",
+        "background-attachment: si se desplaza con el scroll (scroll) o queda fija (fixed)",
       ],
     },
   ];
