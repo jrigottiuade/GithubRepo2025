@@ -11,7 +11,7 @@ const DisplayCode = ({ code, language = "javascript" }) => {
   };
 
   return (
-    <div className="relative bg-gray-900 text-gray-100 p-4 rounded-lg shadow-md overflow-x-auto">
+    <div className="relative bg-gray-900 text-gray-100 p-4 rounded-lg shadow-md overflow-x-auto mb-3">
       {/* Botón de Copiar */}
       <button
         onClick={copyToClipboard}
@@ -21,7 +21,7 @@ const DisplayCode = ({ code, language = "javascript" }) => {
             : "absolute top-2 right-2 bg-gray-500 hover:bg-gray-300  text-white p-2 rounded-md transition"
         }
       >
-        <span className="material-icons">content_copy</span>{" "}
+        <span className="material-icons text-sm">content_copy</span>{" "}
       </button>
 
       {/* Muestra el código con formato */}

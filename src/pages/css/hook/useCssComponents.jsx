@@ -1,16 +1,14 @@
 import { useState } from "react";
-import CssComponent1 from "../components/CssComponent1";
-import CssComponent2 from "../components/CssComponent2";
-import CssComponent3 from "../components/CssComponent3";
+import CssCodeSnippetsView from "../subPages/codeSnippets/view/CssCodeSnippetsView";
+import CssHandsOn1View from "../subPages/handsOn1/view/CssHandsOn1View"
 
 export const useCssComponents = () => {
-  const cssComponents = {
-    Ejemplos: <CssComponent1 />,
-    Ejercicios: <CssComponent2 />,
-    "Code Snippets": <CssComponent3 />,
-  };
+  const [cssSelectedComponent, setCssSelectedComponent] = useState("Code Snippets");
 
-  const [cssSelectedComponent, setCssSelectedComponent] = useState("Ejemplos");
+  const cssComponents = {
+    "Code Snippets": <CssCodeSnippetsView />,
+    "Hands on 1": <CssHandsOn1View />
+  };
 
   return { cssSelectedComponent, setCssSelectedComponent, cssComponents };
 };
