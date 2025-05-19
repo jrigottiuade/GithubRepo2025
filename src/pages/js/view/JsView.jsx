@@ -1,11 +1,18 @@
-import React from 'react'
+import React from "react";
+import { useJsComponents } from "../hooks/useJsComponents";
+import SidebarLayout from '../../../core/layout/SidebarLayout'
 
 const JsView = () => {
-  return (
-    <div>
-      <h2>Contenido JS</h2>
-    </div>
-  )
-}
+  const { jsSelectedComponent, setJsSelectedComponent, jsComponents } =
+    useJsComponents();
 
-export default JsView
+  return (
+    <SidebarLayout
+      selectedComponent={jsSelectedComponent}
+      setSelectedComponent={setJsSelectedComponent}
+      components={jsComponents}
+    ></SidebarLayout>
+  );
+};
+
+export default JsView;
