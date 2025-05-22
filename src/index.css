@@ -20,6 +20,10 @@ h1 {
   --color-bermuda: #78dcca;
 }
 
+.link {
+  @apply inline-block px-4 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-blue-700 transition duration-200 ease-in-out
+}
+
 .title-h1 {
   @apply text-xl font-bold mb-4;
 }
