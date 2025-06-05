@@ -3,6 +3,7 @@ import Ejercicio1Step1 from "../componentes/Ejercicio1Step1";
 import Ejercicio1Step2 from "../componentes/Ejercicio1Step2";
 import Ejercicio1Step3 from "../componentes/Ejercicio1Step3";
 import Ejercicio1Step4 from "../componentes/Ejercicio1Step4";
+import Ejercicio1Step5 from "../componentes/Ejercicio1Step5";
 
 export const useEjercicio1 = () => {
   const ejercicio1Components = [
@@ -10,7 +11,8 @@ export const useEjercicio1 = () => {
     <Ejercicio1Step1 />,
     <Ejercicio1Step2 />,
     <Ejercicio1Step3 />,
-    <Ejercicio1Step4 />
+    <Ejercicio1Step4 />,
+    <Ejercicio1Step5 />
   ];
 
   const codigoHtml = `
